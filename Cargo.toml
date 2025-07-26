@@ -1,0 +1,46 @@
+[package]
+name = "known-width"
+version = "0.1.0"
+edition = "2021"
+description = """
+Traits for integer types, implemented only for those primitive integer
+types having a consistent width across all targets.
+"""
+documentation = "https://docs.rs/known-width"
+readme = "README.md"
+repository = "https://github.com/marshray/known-width"
+license = "MIT OR Apache-2.0"
+categories = [
+    "no-std",
+    "no-std::no-alloc",
+    "encoding",
+    "embedded",
+    "network-programming",
+]
+keywords = [
+    "no-std", "no_std",
+    "bits", "bytes",
+    "numerics",
+]
+publish = false
+
+[features] #=========================================================== features
+
+# rustversion
+# num-traits
+
+[dependencies] #=================================================== dependencies
+
+[dependencies.rustversion]
+optional = true
+version = "1.0.21"
+default-features = false
+
+[dependencies.num-traits]
+optional = true
+version = "0.2.19" # 2024-05-03
+default-features = false
+
+[dev-dependencies] #=========================================== dev-dependencies
+
+static_assertions = { version = "1.1.0", default-features = false, features = [] }
